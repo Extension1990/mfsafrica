@@ -1,5 +1,5 @@
 .card {
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
     overflow-x: auto;
 }
 thead {
@@ -13,4 +13,24 @@ thead {
 }
 a {
     cursor: pointer;
+}
+*:focus {
+    outline: none;
+}
+.local {
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    background: transparent;
+}
+.search, .date {
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    background: transparent;
+    height: 38px;
+    border-right: none;
+}
+.form-control {
+    border-left: none;
+    width: 30px;
+    padding-left: 0px;
 }
