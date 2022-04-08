@@ -9,6 +9,7 @@ import { MainService } from 'src/app/services/main.service';
 export class DashboardLayoutComponent implements OnInit {
 
   transactions: any;
+  searchText: string = '';
 
   constructor(private service: MainService) { }
 
@@ -19,7 +20,6 @@ export class DashboardLayoutComponent implements OnInit {
   getTransactions() {
     this.service.getTransactions().subscribe((transactions: any) => {
       this.transactions = transactions;
-      console.log(this.transactions);
     })
   }
 

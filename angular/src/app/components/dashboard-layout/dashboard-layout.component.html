@@ -12,7 +12,7 @@
             <div class="input-group-prepend">
               <span class="input-group-text search" id="basic-addon1"><i class="fa fa-search"></i></span>
             </div>
-            <input type="text" class="form-control" placeholder="Search" aria-label="Username" aria-describedby="basic-addon1">
+            <input type="text" class="form-control" placeholder="Search" [(ngModel)]="searchText" aria-label="Username" aria-describedby="basic-addon1">
         </div>
     </div>
     <div class="col-md-6 d-flex">
@@ -47,7 +47,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let transaction of transactions">
+          <tr *ngFor="let transaction of transactions | filter:searchText">
             <th scope="row">1</th>
             <td>{{ transaction.value_date }}</td>
             <td>{{ transaction.transaction_id }}</td>
