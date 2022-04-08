@@ -19,6 +19,8 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
 import { DashboardLayoutComponent } from './components/dashboard-layout/dashboard-layout.component';
+import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -35,6 +37,7 @@ import { DashboardLayoutComponent } from './components/dashboard-layout/dashboar
     MatToolbarModule,
     MatButtonModule,
     FormsModule,
+    HttpClientModule,
     MatFormFieldModule,
     MatInputModule,
     MatSidenavModule,

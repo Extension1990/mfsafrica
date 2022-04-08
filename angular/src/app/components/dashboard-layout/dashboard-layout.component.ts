@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MainService } from 'src/app/services/main.service';
 
 @Component({
   selector: 'app-dashboard-layout',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashboardLayoutComponent implements OnInit {
 
-  constructor() { }
+  transactions: any;
+
+  constructor(private service: MainService) { }
 
   ngOnInit(): void {
+    this.getTransactions();
+  }
+
+  getTransactions() {
+    this.service.getTransactions().subscribe((transactions: any) => {
+      this.transactions = transactions;
+      console.log(this.transactions);
+    })
   }
 
 }

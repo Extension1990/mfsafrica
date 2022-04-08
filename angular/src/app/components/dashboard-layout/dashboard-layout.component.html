@@ -47,49 +47,13 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <tr *ngFor="let transaction of transactions">
             <th scope="row">1</th>
-            <td>2022-01-14</td>
-            <td>3432454334</td>
-            <td>Money Transfer</td>
-            <td>*************&nbsp;&nbsp;<i class="fa fa-eye-slash" aria-hidden="true"></i></td>
-            <td>Active</td>
-            <td>
-                <a href=""><i class="fa fa-edit"></i></a>&nbsp;&nbsp;
-                <a href=""><i class="fa fa-trash"></i></a>
-            </td>
-          </tr>
-          <tr>
-            <th scope="row">1</th>
-            <td>2022-01-14</td>
-            <td>3432454334</td>
-            <td>Money Transfer</td>
-            <td>*************&nbsp;&nbsp;<i class="fa fa-eye" aria-hidden="true"></i></td>
-            <td>Error</td>
-            <td>
-                <a href=""><i class="fa fa-edit"></i></a>&nbsp;&nbsp;
-                <a href=""><i class="fa fa-trash"></i></a>
-            </td>
-          </tr>
-          <tr>
-            <th scope="row">1</th>
-            <td>2022-01-14</td>
-            <td>3432454334</td>
-            <td>Money Transfer</td>
-            <td>*************&nbsp;&nbsp;<i class="fa fa-eye-slash" aria-hidden="true"></i></td>
-            <td>Active</td>
-            <td>
-                <a href=""><i class="fa fa-edit"></i></a>&nbsp;&nbsp;
-                <a href=""><i class="fa fa-trash"></i></a>
-            </td>
-          </tr>
-          <tr>
-            <th scope="row">1</th>
-            <td>2022-01-14</td>
-            <td>3432454334</td>
-            <td>Money Transfer</td>
-            <td>*************&nbsp;&nbsp;<i class="fa fa-eye" aria-hidden="true"></i></td>
-            <td>Hold</td>
+            <td>{{ transaction.value_date }}</td>
+            <td>{{ transaction.transaction_id }}</td>
+            <td>{{ transaction.movement_type }}</td>
+            <td>{{ transaction.amount }}&nbsp;&nbsp;<i class="fa fa-eye-slash" aria-hidden="true"></i></td>
+            <td>{{ transaction.status }}</td>
             <td>
                 <a href=""><i class="fa fa-edit"></i></a>&nbsp;&nbsp;
                 <a href=""><i class="fa fa-trash"></i></a>
