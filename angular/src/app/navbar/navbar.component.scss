@@ -26,6 +26,16 @@ a:hover {
 }
 
 .navbar {
-  background: whitesmoke;
+  background: #F3F3F1;
   padding: 30px;
+}
+
+.container {
+  padding: 20px;
+}
+
+@media screen and (max-width: 992px) {
+  .container {
+    padding: 0px;
+  }
 }
