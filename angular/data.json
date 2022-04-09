@@ -1,13 +1,28 @@
 {
   "transactions": [
     {
+      "id": 1,
+      "value_date": "2022-01-11",
+      "transaction_id": 1480636527,
+      "amount": "600000",
+      "status": "Error",
+      "movement_type": "Airtime"
+    },
+    {
+      "id": 2,
+      "value_date": "2022-01-11",
+      "transaction_id": 1480636523,
+      "amount": "600000",
+      "status": "Active",
+      "movement_type": "Money Transfer"
+    },
+    {
       "id": 3,
-      "transaction_id": 1480636589,
       "value_date": "2022-01-17",
-      "movement_type": "Money Transfer",
+      "transaction_id": 1480636589,
       "amount": "500000",
       "status": "Active",
-      "hide": true
+      "movement_type": "Money Transfer"
     },
     {
       "id": 4,
@@ -43,6 +58,22 @@
       "status": "Active",
       "movement_type": "Collection",
       "id": 7
+    },
+    {
+      "value_date": "2022-01-31",
+      "transaction_id": "1480636562",
+      "amount": "780000",
+      "status": "Hold",
+      "movement_type": "Money Transfer",
+      "id": 8
+    },
+    {
+      "value_date": "2022-02-01",
+      "transaction_id": "1480636563",
+      "amount": "380000",
+      "status": "Active",
+      "movement_type": "Money Transfer",
+      "id": 10
     }
   ]
 }
