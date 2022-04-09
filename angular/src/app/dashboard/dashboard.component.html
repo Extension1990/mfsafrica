@@ -12,7 +12,7 @@
             <div class="input-group-prepend">
               <span class="input-group-text search" id="basic-addon1"><i class="fa fa-search"></i></span>
             </div>
-            <input type="text" class="form-control" placeholder="Search" [(ngModel)]="searchText" aria-label="Username" aria-describedby="basic-addon1">
+            <input type="text" class="form-control input" placeholder="Search" [(ngModel)]="searchText" aria-label="Username" aria-describedby="basic-addon1">
         </div>
     </div>
     <div class="col-md-6 d-flex">
@@ -29,7 +29,7 @@
         <div class="input-group-prepend">
             <span class="input-group-text date" id="basic-addon1"><i class="fa fa-calendar"></i></span>
         </div>
-        <input type="text" class="form-control" placeholder="Start date - End date" aria-label="date" aria-describedby="basic-addon1">
+        <input type="text" class="form-control input" placeholder="Start date - End date" aria-label="date" aria-describedby="basic-addon1">
     </div>
 </div>
 
@@ -85,27 +85,27 @@
                           <div class="form-group">
                             <div class="row">
                               <div class="col-md-12">
-                                <input type="text" hidden class="form-contro" name="id" [(ngModel)]="transaction.id">
+                                <input type="text" hidden class="form-control" name="id" [(ngModel)]="transaction.id">
                               </div>
                               <div class="col-md-6 mb-3">
                                 <label for="">Value Date</label>
-                                <input type="text" class="form-contro" name="value_date" [(ngModel)]="transaction.value_date">
+                                <input type="text" class="form-control w-100" name="value_date" [(ngModel)]="transaction.value_date">
                               </div>
                               <div class="col-md-6 mb-3">
                                 <label for="">Transaction ID</label>
-                                <input type="text" class="form-contro" name="transaction_id" [(ngModel)]="transaction.transaction_id">
+                                <input type="text" class="form-control w-100" name="transaction_id" [(ngModel)]="transaction.transaction_id">
                               </div>
                               <div class="col-md-6">
                                 <label for="">Amount</label>
-                                <input type="text" class="form-contro" name="amount" [(ngModel)]="transaction.amount">
+                                <input type="text" class="form-control w-100" name="amount" [(ngModel)]="transaction.amount">
                               </div>
                               <div class="col-md-6">
                                 <label for="">Status</label>
-                                <input type="text" class="form-contro" name="status" [(ngModel)]="transaction.status">
+                                <input type="text" class="form-control w-100" name="status" [(ngModel)]="transaction.status">
                               </div>
-                              <div class="col-md-12">
+                              <div class="col-md-12 mt-3">
                                 <label for="">Movement Type</label>
-                                <input type="text" class="form-contro mt-4" name="movement_type" [(ngModel)]="transaction.movement_type">
+                                <input type="text" class="form-control w-100" name="movement_type" [(ngModel)]="transaction.movement_type">
                               </div>
                             </div>
                           </div>
