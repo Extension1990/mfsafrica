@@ -41,11 +41,11 @@
       "status": "Error"
     },
     {
-      "value_date": "2022-02-23",
-      "transaction_id": "1247786547",
+      "value_date": "2022-02-27",
+      "transaction_id": "1247786549",
       "amount": "480000",
       "status": "Error",
-      "movement_type": "Services",
+      "movement_type": "Service Collection",
       "id": 8
     }
   ]

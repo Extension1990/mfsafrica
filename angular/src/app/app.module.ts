@@ -18,7 +18,6 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
-import { DashboardLayoutComponent } from './components/dashboard-layout/dashboard-layout.component';
 import { HttpClientModule } from '@angular/common/http';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 
@@ -27,8 +26,7 @@ import { Ng2SearchPipeModule } from 'ng2-search-filter';
   declarations: [
     AppComponent,
     NavbarComponent,
-    DashboardComponent,
-    DashboardLayoutComponent
+    DashboardComponent
   ],
   imports: [
     BrowserModule,

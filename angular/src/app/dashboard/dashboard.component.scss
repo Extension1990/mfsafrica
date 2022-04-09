@@ -1,21 +1,44 @@
-.grid-container {
-  margin: 20px;
+.card {
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+  overflow-x: auto;
+}
+thead {
+  border: none;
+}
+.fa-edit {
+  color: blue;
+}
+.fa-trash {
+  color: red;
+}
+a {
+  cursor: pointer;
+}
+*:focus {
+  outline: none;
+}
+.local {
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  background: transparent;
+}
+.search, .date {
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  background: transparent;
+  height: 38px;
+  border-right: none;
+}
+.form-control {
+  border-left: none;
+  width: 30px;
+  padding-left: 0px;
 }
 
-.dashboard-card {
-  position: absolute;
-  top: 15px;
-  left: 15px;
-  right: 15px;
-  bottom: 15px;
-}
-
-.more-button {
-  position: absolute;
-  top: 5px;
-  right: 10px;
-}
-
-.dashboard-card-content {
-  text-align: center;
+.field-icon {
+  float: right;
+  left: -15px;
+  margin-top: -25px;
+  position: relative;
+  z-index: 2;
 }

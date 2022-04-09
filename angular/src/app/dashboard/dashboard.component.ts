@@ -1,33 +1,55 @@
-import { Component } from '@angular/core';
-import { map } from 'rxjs/operators';
-import { Breakpoints, BreakpointObserver } from '@angular/cdk/layout';
+import { Component, OnInit } from '@angular/core';
+import { MainService } from 'src/app/services/main.service';
 
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss']
 })
-export class DashboardComponent {
-  /** Based on the screen size, switch from standard to one column per row */
-  cards = this.breakpointObserver.observe(Breakpoints.Handset).pipe(
-    map(({ matches }) => {
-      if (matches) {
-        return [
-          { title: 'Card 1', cols: 1, rows: 1 },
-          { title: 'Card 2', cols: 1, rows: 1 },
-          { title: 'Card 3', cols: 1, rows: 1 },
-          { title: 'Card 4', cols: 1, rows: 1 }
-        ];
-      }
+export class DashboardComponent implements OnInit {
 
-      return [
-        { title: 'Card 1', cols: 2, rows: 1 },
-        { title: 'Card 2', cols: 1, rows: 1 },
-        { title: 'Card 3', cols: 1, rows: 2 },
-        { title: 'Card 4', cols: 1, rows: 1 }
-      ];
+  transactions: any;
+  value_date: string;
+  transaction_id: number;
+  amount: number;
+  status: string;
+  movement_type: string;
+  searchText: string;
+
+  hide : boolean = true;
+
+  constructor(private service: MainService) { }
+
+  ngOnInit(): void {
+    this.getTransactions();
+  }
+
+  getTransactions() {
+    this.service.getTransactions().subscribe((transactions: any) => {
+      this.transactions = transactions;
     })
-  );
+  }
 
-  constructor(private breakpointObserver: BreakpointObserver) {}
+  editTransaction(id: number, value_date: string, transaction_id: number, amount: number, status: string, movement_type: string) {
+    this.service.editTransaction(id, value_date, transaction_id, amount, status, movement_type).subscribe((transaction: any) => {
+      this.resetForm();
+      this.getTransactions();
+    })
+  }
+
+  resetForm() {
+    this.status = '';
+    this.movement_type = '';
+  }
+
+  deleteTransaction(id: number) {
+    this.service.deleteTransaction(id).subscribe((transaction: any) => {
+      this.getTransactions();
+    })
+  }
+
+  myFunction() {
+    this.hide = !this.hide;
+  }
+
 }
