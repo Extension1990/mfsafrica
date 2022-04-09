@@ -15,9 +15,11 @@
     color: #FF9D41;
   }
 }
+
 .fa-arrow-left {
   margin-top: 16px;
 }
+
 .sidenav .mat-toolbar {
   background: inherit;
   color: #F3F3F1;
@@ -38,6 +40,14 @@
 
 .container {
   padding: 20px;
+}
+
+.footer {
+  background: rgb(245, 245, 245);
+  padding: 10px;
+  p {
+    margin-top: 10px;
+  }
 }
 
 @media screen and (max-width: 992px) {
