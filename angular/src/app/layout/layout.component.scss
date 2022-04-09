@@ -8,6 +8,21 @@
   left: 20px;
 }
 
+.input {
+  border-right: none;
+  padding-right: 0px;
+  margin-top: 5px;
+}
+
+.reset {
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  background: transparent;
+  height: 38px;
+  border-left: none;
+  margin-top: 5px;
+}
+
 .sidenav-container {
   height: 100%;
 }

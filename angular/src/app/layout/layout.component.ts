@@ -16,6 +16,12 @@ export class LayoutComponent {
       shareReplay()
     );
 
+  inputText: string;
+
   constructor(private breakpointObserver: BreakpointObserver) {}
+
+  reset() {
+    this.inputText = '';
+  }
 
 }

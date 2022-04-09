@@ -36,7 +36,10 @@
       <i class="fa fa-arrow-left" aria-hidden="true"></i>&nbsp;&nbsp;<span class="me-auto mt-2"><h2>Transactions</h2></span>&nbsp;&nbsp;
       <form class="float-start">
           <div class="input-group col-md-4">
-            <input class="form-control py-2 border-right-0 border" type="search" placeholder="Type something..." id="example-search-input">
+            <input type="text" class="form-control input" placeholder="Type something" [(ngModel)]="inputText" aria-label="search" aria-describedby="basic-addon1">
+            <div class="input-group-prepend">
+              <a href="" (click)="reset()"><span class="input-group-text reset" id="basic-addon1"><i class="fa fa-times"></i></span></a>
+            </div>
         </div>
       </form>
           </ul>
