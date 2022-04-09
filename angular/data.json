@@ -37,22 +37,12 @@
       "hide": true
     },
     {
-      "id": 7,
-      "transaction_id": 1480636593,
-      "value_date": "2022-01-20",
-      "movement_type": "Collection",
+      "value_date": "2022-01-29",
+      "transaction_id": "1480636594",
       "amount": "480000",
-      "status": "Error",
-      "hide": true
-    },
-    {
-      "id": 8,
-      "value_date": "2022-02-27",
-      "transaction_id": "1247786549",
-      "amount": "480023",
-      "status": "Error",
-      "movement_type": "Service Collection",
-      "hide": true
+      "status": "Active",
+      "movement_type": "Collection",
+      "id": 7
     }
   ]
 }

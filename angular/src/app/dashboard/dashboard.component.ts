@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MainService } from 'src/app/services/main.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-dashboard',
@@ -32,8 +33,12 @@ export class DashboardComponent implements OnInit {
 
   editTransaction(id: number, value_date: string, transaction_id: number, amount: number, status: string, movement_type: string) {
     this.service.editTransaction(id, value_date, transaction_id, amount, status, movement_type).subscribe((transaction: any) => {
-      this.resetForm();
+     if(transaction) {
       this.getTransactions();
+      this.successUpdateAlert();
+     } else {
+       this.errorUpdateAlert();
+     }
     })
   }
 
@@ -44,7 +49,12 @@ export class DashboardComponent implements OnInit {
 
   deleteTransaction(id: number) {
     this.service.deleteTransaction(id).subscribe((transaction: any) => {
-      this.getTransactions();
+      if(transaction) {
+        this.getTransactions();
+        this.successDeleteAlert();
+      } else {
+        this.errorDeleteAlert();
+      }
     })
   }
 
@@ -52,6 +62,22 @@ export class DashboardComponent implements OnInit {
     if(index) {
       this.hide = !this.hide;
     }
+  }
+
+  successUpdateAlert() {
+    Swal.fire("Done", 'Updated successfully.', 'success');
+  }
+
+  errorUpdateAlert() {
+    Swal.fire("Error", 'Could not update transaction!', 'error');
+  }
+
+  successDeleteAlert() {
+    Swal.fire("Done", 'Deleted successfully.', 'success');
+  }
+
+  errorDeleteAlert() {
+    Swal.fire("Error", 'Could not delete transaction!', 'error');
   }
 
 }
