@@ -55,7 +55,7 @@
       "value_date": "2022-01-29",
       "transaction_id": "1480636594",
       "amount": "480000",
-      "status": "Active",
+      "status": "Hold",
       "movement_type": "Collection",
       "id": 7
     },
@@ -63,7 +63,7 @@
       "value_date": "2022-01-31",
       "transaction_id": "1480636562",
       "amount": "780000",
-      "status": "Hold",
+      "status": "Active",
       "movement_type": "Money Transfer",
       "id": 8
     }

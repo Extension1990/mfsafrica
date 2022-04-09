@@ -65,7 +65,11 @@ export class DashboardComponent implements OnInit {
   }
 
   successUpdateAlert() {
-    Swal.fire("Done", 'Updated successfully.', 'success');
+    Swal.fire({
+      text: 'Updated successfully.',
+      icon: 'success',
+      confirmButtonColor: '#001F30'
+    })
   }
 
   errorUpdateAlert() {
@@ -73,7 +77,11 @@ export class DashboardComponent implements OnInit {
   }
 
   successDeleteAlert() {
-    Swal.fire("Done", 'Deleted successfully.', 'success');
+    Swal.fire({
+      text: 'Deleted successfully.',
+      icon: 'success',
+      confirmButtonColor: '#001F30'
+    })
   }
 
   errorDeleteAlert() {
