@@ -1,3 +1,13 @@
+.logo {
+  height: 20px;
+  width: 20px;
+  background: #A1D1F5;
+  transform: rotateY(0deg) rotate(45deg);
+  z-index: -200;
+  position: absolute;
+  left: 20px;
+}
+
 .sidenav-container {
   height: 100%;
 }
