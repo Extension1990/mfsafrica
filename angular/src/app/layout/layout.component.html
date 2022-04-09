@@ -3,7 +3,7 @@
       [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
       [mode]="(isHandset$ | async) ? 'over' : 'side'"
       [opened]="(isHandset$ | async) === false">
-    <mat-toolbar><div class="logo"></div> beyonic</mat-toolbar>
+    <mat-toolbar><div class="logo"></div> <b>beyonic</b></mat-toolbar>
     <mat-nav-list>
       <a mat-list-item routerLink="/dashboard" class="text-warning"><i class="fa fa-home"></i>&nbsp;&nbsp; Dashboard</a>
       <a mat-list-item href="#"><i class="fa fa-question-circle"></i>&nbsp;&nbsp; Balance</a>
