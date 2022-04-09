@@ -64,3 +64,7 @@ a {
   border-bottom-left-radius: 0px;
   height: 38px;
 }
+.form-group input:focus{
+  outline:0px !important; 
+  box-shadow: none !important;
+}
