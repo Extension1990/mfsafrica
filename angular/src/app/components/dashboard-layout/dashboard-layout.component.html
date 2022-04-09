@@ -1,6 +1,6 @@
-<h5>Country of interest</h5><hr>
+<h3><b>Country of interest</b></h3><hr>
 <p>Kenya</p><br>
-<h5>Edit trasactions</h5><hr>
+<h3><b>Edit trasactions</b></h3><hr>
 <p>Edit the transactions below to match the right information.</p><br>
 
 <div class="row mb-3">
@@ -47,7 +47,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let transaction of transactions | filter:searchText">
+          <tr *ngFor="let transaction of transactions | filter:searchText; let i = index" [attr.data-index]="i">
             <th scope="row">1</th>
             <td>{{ transaction.value_date }}</td>
             <td>{{ transaction.transaction_id }}</td>
@@ -55,8 +55,61 @@
             <td>{{ transaction.amount }}&nbsp;&nbsp;<i class="fa fa-eye-slash" aria-hidden="true"></i></td>
             <td>{{ transaction.status }}</td>
             <td>
-                <a href=""><i class="fa fa-edit"></i></a>&nbsp;&nbsp;
-                <a href=""><i class="fa fa-trash"></i></a>
+                <a href="" data-bs-toggle="modal" [attr.data-bs-target]="'#editTransactionModal'+transaction.transaction_id"><i class="fa fa-edit"></i></a>&nbsp;&nbsp;
+                <a href="" data-bs-toggle="modal" [attr.data-bs-target]="'#deleteTransactionModal'+transaction.transaction_id"><i class="fa fa-trash"></i></a>
+
+                <!-- Edit Transaction Modal -->
+                <div class="modal fade" [attr.id]="'editTransactionModal' + transaction.transaction_id" tabindex="-1" role="dialog" data-bs-backdrop="false" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h3 class="modal-title" id="exampleModalCenterTitle">Edit Transaction <span class="text-info">{{ transaction.transaction_id }}</span></h3>
+                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <form action="" method="post">
+                          <div class="form-group">
+                            <div class="row">
+                              <div class="col-md-6">
+                                <input type="text" class="form-control" placeholder="{{transaction.amount}}">
+                              </div>
+                              <div class="col-md-6">
+                                <input type="text" class="form-control" placeholder="transaction.status">
+                              </div>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-light me-auto" data-bs-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-success">Save changes</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Delete Transaction Modal -->
+                <div class="modal fade" [attr.id]="'deleteTransactionModal' + transaction.transaction_id" tabindex="-1" role="dialog" data-bs-backdrop="false" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h3 class="modal-title" id="exampleModalCenterTitle">Delete Transaction <span class="text-info">{{ transaction.transaction_id }}</span></h3>
+                        <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        <h4>Are you sure you want to delete transaction <span class="text-danger">{{ transaction.transaction_id }}</span> ?</h4>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-light me-auto" data-bs-dismiss="modal">Cancel</button>
+                        <button type="button" class="btn btn-danger">Delete</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
             </td>
           </tr>
         </tbody>
