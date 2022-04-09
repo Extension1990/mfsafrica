@@ -48,8 +48,10 @@ export class DashboardComponent implements OnInit {
     })
   }
 
-  myFunction() {
-    this.hide = !this.hide;
+  toggleAmount(index: number) {
+    if(index) {
+      this.hide = !this.hide;
+    }
   }
 
 }

@@ -6,7 +6,8 @@
       "value_date": "2022-01-17",
       "movement_type": "Money Transfer",
       "amount": "500000",
-      "status": "Active"
+      "status": "Active",
+      "hide": true
     },
     {
       "id": 4,
@@ -14,7 +15,8 @@
       "value_date": "2022-01-18",
       "movement_type": "Collection",
       "amount": "320000",
-      "status": "Active"
+      "status": "Active",
+      "hide": true
     },
     {
       "id": 5,
@@ -22,7 +24,8 @@
       "value_date": "2022-01-19",
       "movement_type": "Airtime",
       "amount": "800000",
-      "status": "Error"
+      "status": "Error",
+      "hide": true
     },
     {
       "id": 6,
@@ -30,7 +33,8 @@
       "value_date": "2022-01-19",
       "movement_type": "Money Transfer",
       "amount": "800000",
-      "status": "Error"
+      "status": "Error",
+      "hide": true
     },
     {
       "id": 7,
@@ -38,15 +42,17 @@
       "value_date": "2022-01-20",
       "movement_type": "Collection",
       "amount": "480000",
-      "status": "Error"
+      "status": "Error",
+      "hide": true
     },
     {
+      "id": 8,
       "value_date": "2022-02-27",
       "transaction_id": "1247786549",
       "amount": "480023",
       "status": "Error",
       "movement_type": "Service Collection",
-      "id": 8
+      "hide": true
     }
   ]
 }

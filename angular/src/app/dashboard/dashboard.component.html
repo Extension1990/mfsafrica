@@ -61,16 +61,14 @@
             <td>{{ transaction.transaction_id }}</td>
             <td>{{ transaction.movement_type }}</td>
             <td>
-                {{ transaction.amount }}&nbsp;&nbsp;<i class="fa fa-eye-slash" aria-hidden="true" (click)="myFunction()"></i>
-                <span class="input-placeholder">
-                    <input style="float: left" [(ngModel)]="transaction.amount" type="password" id="inputPassword"  name="password"  [type]="hide ? 'password' : 'text'">
-                    <mat-icon class="placeholder" (click)="myFunction()">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-                </span>
+                <input style="float: left" class="amount" [(ngModel)]="transaction.amount" type="password" [attr.id]="'toggle' + transaction.id"  name="amount"  [type]="hide ? 'password' : 'text'">
+                <span class="icon" *ngIf="hide === true" (click)="toggleAmount(transaction.id)"><i class="fa fa-eye"></i></span>
+                <span class="icon" *ngIf="hide === false" (click)="toggleAmount(transaction.id)"><i class="fa fa-eye-slash"></i></span>
             </td>
             <td>{{ transaction.status }}</td>
             <td>
-                <a href="" data-bs-toggle="modal" [attr.data-bs-target]="'#editTransactionModal'+transaction.id"><i class="fa fa-edit"></i></a>&nbsp;&nbsp;
-                <a href="" data-bs-toggle="modal" [attr.data-bs-target]="'#deleteTransactionModal'+transaction.id"><i class="fa fa-trash"></i></a>
+                <a href="" data-bs-toggle="modal" [attr.data-bs-target]="'#editTransactionModal' + transaction.id"><i class="fa fa-edit"></i></a>&nbsp;&nbsp;
+                <a href="" data-bs-toggle="modal" [attr.data-bs-target]="'#deleteTransactionModal' + transaction.id"><i class="fa fa-trash"></i></a>
 
                 <!-- Edit Transaction Modal -->
                 <div class="modal fade" [attr.id]="'editTransactionModal' + transaction.id" tabindex="-1" role="dialog" data-bs-backdrop="false" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
