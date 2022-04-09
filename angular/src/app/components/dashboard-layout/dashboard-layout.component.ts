@@ -32,7 +32,6 @@ export class DashboardLayoutComponent implements OnInit {
     this.service.editTransaction(id, value_date, transaction_id, amount, status, movement_type).subscribe((transaction: any) => {
       this.resetForm();
       this.getTransactions();
-      console.log(transaction);
     })
   }
 

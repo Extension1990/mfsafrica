@@ -16,7 +16,7 @@ export class NavbarComponent {
       shareReplay()
     );
 
-    searchText!: string;
+    inputText: string;
 
   constructor(private breakpointObserver: BreakpointObserver) {}
 
