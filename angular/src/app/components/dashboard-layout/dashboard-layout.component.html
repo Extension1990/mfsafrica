@@ -55,11 +55,11 @@
             <td>{{ transaction.amount }}&nbsp;&nbsp;<i class="fa fa-eye-slash" aria-hidden="true"></i></td>
             <td>{{ transaction.status }}</td>
             <td>
-                <a href="" data-bs-toggle="modal" [attr.data-bs-target]="'#editTransactionModal'+transaction.transaction_id"><i class="fa fa-edit"></i></a>&nbsp;&nbsp;
-                <a href="" data-bs-toggle="modal" [attr.data-bs-target]="'#deleteTransactionModal'+transaction.transaction_id"><i class="fa fa-trash"></i></a>
+                <a href="" data-bs-toggle="modal" [attr.data-bs-target]="'#editTransactionModal'+transaction.id"><i class="fa fa-edit"></i></a>&nbsp;&nbsp;
+                <a href="" data-bs-toggle="modal" [attr.data-bs-target]="'#deleteTransactionModal'+transaction.id"><i class="fa fa-trash"></i></a>
 
                 <!-- Edit Transaction Modal -->
-                <div class="modal fade" [attr.id]="'editTransactionModal' + transaction.transaction_id" tabindex="-1" role="dialog" data-bs-backdrop="false" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal fade" [attr.id]="'editTransactionModal' + transaction.id" tabindex="-1" role="dialog" data-bs-backdrop="false" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                   <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content">
                       <div class="modal-header">
@@ -72,11 +72,28 @@
                         <form action="" method="post">
                           <div class="form-group">
                             <div class="row">
-                              <div class="col-md-6">
-                                <input type="text" class="form-control" placeholder="{{transaction.amount}}">
+                              <div class="col-md-12">
+                                <input type="text" hidden class="form-contro" name="id" [(ngModel)]="transaction.id">
+                              </div>
+                              <div class="col-md-6 mb-3">
+                                <label for="">Value Date</label>
+                                <input type="text" class="form-contro" name="value_date" [(ngModel)]="transaction.value_date">
+                              </div>
+                              <div class="col-md-6 mb-3">
+                                <label for="">Transaction ID</label>
+                                <input type="text" class="form-contro" name="transaction_id" [(ngModel)]="transaction.transaction_id">
                               </div>
                               <div class="col-md-6">
-                                <input type="text" class="form-control" placeholder="transaction.status">
+                                <label for="">Amount</label>
+                                <input type="text" class="form-contro" name="amount" [(ngModel)]="transaction.amount">
+                              </div>
+                              <div class="col-md-6">
+                                <label for="">Status</label>
+                                <input type="text" class="form-contro" name="status" [(ngModel)]="transaction.status">
+                              </div>
+                              <div class="col-md-12">
+                                <label for="">Movement Type</label>
+                                <input type="text" class="form-contro mt-4" name="movement_type" [(ngModel)]="transaction.movement_type">
                               </div>
                             </div>
                           </div>
@@ -84,14 +101,14 @@
                       </div>
                       <div class="modal-footer">
                         <button type="button" class="btn btn-light me-auto" data-bs-dismiss="modal">Cancel</button>
-                        <button type="button" class="btn btn-success">Save changes</button>
+                        <button type="button" class="btn btn-success" (click)="editTransaction(transaction.id, transaction.value_date, transaction.transaction_id, transaction.amount, transaction.status, transaction.movement_type)" data-bs-dismiss="modal">Save changes</button>
                       </div>
                     </div>
                   </div>
                 </div>
 
                 <!-- Delete Transaction Modal -->
-                <div class="modal fade" [attr.id]="'deleteTransactionModal' + transaction.transaction_id" tabindex="-1" role="dialog" data-bs-backdrop="false" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal fade" [attr.id]="'deleteTransactionModal' + transaction.id" tabindex="-1" role="dialog" data-bs-backdrop="false" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                   <div class="modal-dialog modal-dialog-centered" role="document">
                     <div class="modal-content">
                       <div class="modal-header">
@@ -105,7 +122,7 @@
                       </div>
                       <div class="modal-footer">
                         <button type="button" class="btn btn-light me-auto" data-bs-dismiss="modal">Cancel</button>
-                        <button type="button" class="btn btn-danger">Delete</button>
+                        <button type="button" class="btn btn-danger" (click)="deleteTransaction(transaction.id)" data-bs-dismiss="modal">Delete</button>
                       </div>
                     </div>
                   </div>

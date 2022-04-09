@@ -9,7 +9,12 @@ import { MainService } from 'src/app/services/main.service';
 export class DashboardLayoutComponent implements OnInit {
 
   transactions: any;
-  searchText: string = '';
+  value_date: string;
+  transaction_id: number;
+  amount: number;
+  status: string;
+  movement_type: string;
+  searchText: string;
 
   constructor(private service: MainService) { }
 
@@ -20,6 +25,25 @@ export class DashboardLayoutComponent implements OnInit {
   getTransactions() {
     this.service.getTransactions().subscribe((transactions: any) => {
       this.transactions = transactions;
+    })
+  }
+
+  editTransaction(id: number, value_date: string, transaction_id: number, amount: number, status: string, movement_type: string) {
+    this.service.editTransaction(id, value_date, transaction_id, amount, status, movement_type).subscribe((transaction: any) => {
+      this.resetForm();
+      this.getTransactions();
+      console.log(transaction);
+    })
+  }
+
+  resetForm() {
+    this.status = '';
+    this.movement_type = '';
+  }
+
+  deleteTransaction(id: number) {
+    this.service.deleteTransaction(id).subscribe((transaction: any) => {
+      this.getTransactions();
     })
   }
 
