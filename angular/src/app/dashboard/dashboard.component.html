@@ -62,7 +62,8 @@
                 <span class="icon" *ngIf="hide === true" (click)="toggleAmount(transaction.id)"><i class="fa fa-eye"></i></span>
                 <span class="icon" *ngIf="hide === false" (click)="toggleAmount(transaction.id)"><i class="fa fa-eye-slash"></i></span>
             </td>
-            <td>{{ transaction.status }}</td>
+            <td class="text-success" *ngIf="transaction.status === 'Active'">{{ transaction.status }}</td>
+            <td class="text-danger" *ngIf="transaction.status !== 'Active'">{{ transaction.status }}</td>
             <td>
                 <a href="" data-bs-toggle="modal" [attr.data-bs-target]="'#editTransactionModal' + transaction.id"><i class="fa fa-edit"></i></a>&nbsp;&nbsp;
                 <a href="" data-bs-toggle="modal" [attr.data-bs-target]="'#deleteTransactionModal' + transaction.id"><i class="fa fa-trash"></i></a>
