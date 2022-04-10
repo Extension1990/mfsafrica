@@ -21,6 +21,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { LayoutComponent } from './layout/layout.component';
 
+import { DateRangePickerModule } from '@syncfusion/ej2-angular-calendars';
+
 
 @NgModule({
   declarations: [
@@ -39,6 +41,7 @@ import { LayoutComponent } from './layout/layout.component';
     ReactiveFormsModule,
     HttpClientModule,
     Ng2SearchPipeModule,
+    DateRangePickerModule,
     MatFormFieldModule,
     MatInputModule,
     MatSidenavModule,

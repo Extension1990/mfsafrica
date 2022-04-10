@@ -16,6 +16,8 @@ export class DashboardComponent implements OnInit {
   status: string;
   movement_type: string;
   searchText: string;
+  start: Date = new Date ("10/07/2017"); 
+  end: Date = new Date ("11/25/2017");
 
   hide : boolean = true;
   opened: -1;
@@ -85,6 +87,10 @@ export class DashboardComponent implements OnInit {
 
   errorDeleteAlert() {
     Swal.fire("Error", 'Could not delete transaction!', 'error');
+  }
+
+  getDater(data){
+    console.log(data);
   }
 
 }
