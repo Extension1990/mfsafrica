@@ -72,7 +72,11 @@ input[type="text"]:focus{
 }
 
 .button {
-  background: #001F30;
+  background: #105d86;
+}
+.button:hover {
+  background: #08486a;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 ::ng-deep .mat-form-field {
@@ -87,7 +91,7 @@ mat-form-field {
   box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
   border: none;
   border-top: 3px solid #001F30;
-  background: #e3f5ff;
+  background: #f0faff;
 }
 
 .input {

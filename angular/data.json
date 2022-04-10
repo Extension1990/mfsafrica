@@ -4,7 +4,7 @@
       "value_date": "2022-01-15",
       "transaction_id": 1480636527,
       "amount": "230000",
-      "status": "Hold",
+      "status": "Active",
       "movement_type": "Airtime",
       "hide": true,
       "id": 1
