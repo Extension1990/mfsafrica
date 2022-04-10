@@ -18,9 +18,7 @@ export class DashboardComponent implements OnInit {
   searchText: string;
   start: Date = new Date ("10/07/2017"); 
   end: Date = new Date ("11/25/2017");
-
   hide : boolean = true;
-  opened: -1;
 
   constructor(private service: MainService) { }
 
@@ -28,12 +26,14 @@ export class DashboardComponent implements OnInit {
     this.getTransactions();
   }
 
+  // Get all transactions
   getTransactions() {
     this.service.getTransactions().subscribe((transactions: any) => {
       this.transactions = transactions;
     })
   }
 
+  // Edit a specific transaction by id
   editTransaction(id: number, value_date: string, transaction_id: number, amount: number, status: string, movement_type: string, hide: boolean) {
     this.service.editTransaction(id, value_date, transaction_id, amount, status, movement_type, hide).subscribe((transaction: any) => {
      if(transaction) {
@@ -45,11 +45,7 @@ export class DashboardComponent implements OnInit {
     })
   }
 
-  resetForm() {
-    this.status = '';
-    this.movement_type = '';
-  }
-
+  // Delete a specific transaction by id
   deleteTransaction(id: number) {
     this.service.deleteTransaction(id).subscribe((transaction: any) => {
       if(transaction) {
@@ -61,10 +57,12 @@ export class DashboardComponent implements OnInit {
     })
   }
 
+  // Toggle the amount field to hide/show the transaction amount
   toggleAmount(transaction: any) {
       transaction.hide = !transaction.hide;
   }
 
+  // Show success alert when a transaction has been successfully updated
   successUpdateAlert() {
     Swal.fire({
       text: 'Updated successfully.',
@@ -73,10 +71,12 @@ export class DashboardComponent implements OnInit {
     })
   }
 
+  // Show error alert when a transaction has not been successfully updated
   errorUpdateAlert() {
     Swal.fire("Error", 'Could not update transaction!', 'error');
   }
 
+  // Show success alert when a transaction has been successfully deleted
   successDeleteAlert() {
     Swal.fire({
       text: 'Deleted successfully.',
@@ -85,6 +85,7 @@ export class DashboardComponent implements OnInit {
     })
   }
 
+  // Show error alert when a transaction has been successfully deleted
   errorDeleteAlert() {
     Swal.fire("Error", 'Could not delete transaction!', 'error');
   }

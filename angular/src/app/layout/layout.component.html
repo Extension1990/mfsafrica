@@ -1,3 +1,4 @@
+<!-- Sidebar Navigation -->
 <mat-sidenav-container class="sidenav-container">
   <mat-sidenav #drawer class="sidenav" fixedInViewport
       [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
@@ -16,6 +17,7 @@
   </mat-sidenav>
   <mat-sidenav-content>
 
+    <!-- Header Navigation -->
     <nav class="navbar navbar-expand-lg sticky-top">
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -38,7 +40,7 @@
           <div class="input-group col-md-4">
             <input type="text" class="form-control input" placeholder="Type something" [(ngModel)]="inputText" aria-label="search" aria-describedby="basic-addon1">
             <div class="input-group-prepend">
-              <a href="" (click)="reset()"><span class="input-group-text reset" id="basic-addon1"><i class="fa fa-times"></i></span></a>
+              <a href="" (click)="resetInputText()"><span class="input-group-text reset" id="basic-addon1"><i class="fa fa-times"></i></span></a>
             </div>
         </div>
       </form>
@@ -51,6 +53,7 @@
       <app-dashboard></app-dashboard>
     </div>
 
+    <!-- Footer -->
     <nav class="navbar footer navbar-expand-lg">
       <p class="mx-auto">MFS Africa Assessments | April 2022 &copy; Developed by <span class="text-info">Extension Tlhareseng</span></p>
     </nav>

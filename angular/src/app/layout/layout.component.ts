@@ -20,7 +20,8 @@ export class LayoutComponent {
 
   constructor(private breakpointObserver: BreakpointObserver) {}
 
-  reset() {
+  // Reset input text
+  resetInputText() {
     this.inputText = '';
   }
 
