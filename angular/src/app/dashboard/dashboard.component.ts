@@ -32,8 +32,8 @@ export class DashboardComponent implements OnInit {
     })
   }
 
-  editTransaction(id: number, value_date: string, transaction_id: number, amount: number, status: string, movement_type: string) {
-    this.service.editTransaction(id, value_date, transaction_id, amount, status, movement_type).subscribe((transaction: any) => {
+  editTransaction(id: number, value_date: string, transaction_id: number, amount: number, status: string, movement_type: string, hide: boolean) {
+    this.service.editTransaction(id, value_date, transaction_id, amount, status, movement_type, hide).subscribe((transaction: any) => {
      if(transaction) {
       this.getTransactions();
       this.successUpdateAlert();

@@ -22,8 +22,8 @@ export class MainService {
     return this.httpClient.get(this.mockApi + '/transactions');
   }
 
-  editTransaction(id: number, value_date: string, transaction_id: number, amount: number, status: string, movement_type: string) {
-    return this.httpClient.put(`${this.mockApi}/transactions/${id}`, {value_date, transaction_id, amount, status, movement_type});
+  editTransaction(id: number, value_date: string, transaction_id: number, amount: number, status: string, movement_type: string, hide: boolean) {
+    return this.httpClient.put(`${this.mockApi}/transactions/${id}`, {value_date, transaction_id, amount, status, movement_type, hide});
   }
 
   deleteTransaction(id: number) {

@@ -3,8 +3,8 @@
     {
       "value_date": "2022-01-13",
       "transaction_id": 1480636527,
-      "amount": "600000",
-      "status": "Error",
+      "amount": "230000",
+      "status": "Hold",
       "movement_type": "Airtime",
       "id": 1,
       "hide": true
@@ -19,13 +19,13 @@
       "hide": true
     },
     {
-      "id": 3,
       "value_date": "2022-01-17",
       "transaction_id": 1480636589,
       "amount": "500000",
-      "status": "Active",
+      "status": "Error",
       "movement_type": "Money Transfer",
-      "hide": true
+      "hide": true,
+      "id": 3
     },
     {
       "id": 4,
