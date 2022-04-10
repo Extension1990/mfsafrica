@@ -61,7 +61,8 @@ a {
 .date-input {
   height: 38px;
 }
-.form-group input:focus{
-  outline: 0px !important; 
-  border: none !important;
+input[type="text"]:focus{
+  box-shadow: 0 0 0 rgb(255, 255, 255);
+  border: 0.5px solid rgb(177, 177, 177);
+  border-left: none;
 }
