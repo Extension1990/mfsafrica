@@ -84,24 +84,23 @@
                           <div class="form-group">
                             <div class="row">
                               <div class="col-md-12">
-                                <input type="text" hidden class="form-control" name="id" [(ngModel)]="transaction.id">
+                                <input type="text" hidden class="form-control" [(ngModel)]="transaction.id" name="id">
                               </div>
                               <div class="col-md-6 mb-3">
                                 <label for="">Value Date</label>
-                                <input type="text" class="form-control w-100" name="value_date" [(ngModel)]="transaction.value_date">
+                                <input type="text" class="form-control w-100" [(ngModel)]="transaction.value_date" name="value_date">
                               </div>
                               <div class="col-md-6 mb-3">
                                 <label for="">Transaction ID</label>
-                                <input type="text" class="form-control w-100" name="transaction_id" [(ngModel)]="transaction.transaction_id">
+                                <input type="text" class="form-control w-100" [(ngModel)]="transaction.transaction_id" name="transaction_id">
                               </div>
                               <div class="col-md-6">
                                 <label for="">Amount</label>
-                                <input type="text" class="form-control w-100" name="amount" [(ngModel)]="transaction.amount">
+                                <input type="text" class="form-control w-100" [(ngModel)]="transaction.amount" name="amount">
                               </div>
                               <div class="col-md-6">
                                 <label for="">Status</label>
-                                <!-- <input type="text" class="form-control w-100" name="status" [(ngModel)]="transaction.status"> -->
-                                <select name="stauts" class="form-control w-100" [(ngModel)]="transaction.status">
+                                <select class="form-control w-100" [(ngModel)]="transaction.status" name="stauts">
                                   <option value="Active">Active</option>
                                   <option value="Hold">Hold</option>
                                   <option value="Error">Error</option>

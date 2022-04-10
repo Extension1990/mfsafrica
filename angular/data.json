@@ -71,6 +71,24 @@
       "movement_type": "Money Transfer",
       "id": 8,
       "hide": true
+    },
+    {
+      "value_date": "2022-02-03",
+      "transaction_id": "1480636559",
+      "amount": "380000",
+      "status": "Hold",
+      "movement_type": "Airtime",
+      "id": 9,
+      "hide": true
+    },
+    {
+      "value_date": "2022-02-23",
+      "transaction_id": "1480636558",
+      "amount": "880000",
+      "status": "Error",
+      "movement_type": "Collection",
+      "id": 10,
+      "hide": true
     }
   ]
 }

@@ -10,7 +10,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -36,6 +36,7 @@ import { LayoutComponent } from './layout/layout.component';
     MatToolbarModule,
     MatButtonModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpClientModule,
     Ng2SearchPipeModule,
     MatFormFieldModule,
