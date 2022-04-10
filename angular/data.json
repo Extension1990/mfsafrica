@@ -6,7 +6,8 @@
       "amount": "600000",
       "status": "Error",
       "movement_type": "Airtime",
-      "id": 1
+      "id": 1,
+      "hide": true
     },
     {
       "id": 2,
@@ -14,7 +15,8 @@
       "transaction_id": 1480636523,
       "amount": "600000",
       "status": "Active",
-      "movement_type": "Money Transfer"
+      "movement_type": "Money Transfer",
+      "hide": true
     },
     {
       "id": 3,
@@ -22,7 +24,8 @@
       "transaction_id": 1480636589,
       "amount": "500000",
       "status": "Active",
-      "movement_type": "Money Transfer"
+      "movement_type": "Money Transfer",
+      "hide": true
     },
     {
       "id": 4,
@@ -57,7 +60,8 @@
       "amount": "480000",
       "status": "Hold",
       "movement_type": "Collection",
-      "id": 7
+      "id": 7,
+      "hide": true
     },
     {
       "value_date": "2022-01-31",
@@ -65,7 +69,8 @@
       "amount": "780000",
       "status": "Active",
       "movement_type": "Money Transfer",
-      "id": 8
+      "id": 8,
+      "hide": true
     }
   ]
 }

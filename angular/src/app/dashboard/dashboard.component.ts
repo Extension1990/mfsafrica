@@ -18,6 +18,7 @@ export class DashboardComponent implements OnInit {
   searchText: string;
 
   hide : boolean = true;
+  opened: -1;
 
   constructor(private service: MainService) { }
 
