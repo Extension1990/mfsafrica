@@ -20,7 +20,7 @@
       </mat-form-field>
     </div>
     <div class="col-md-3">
-      
+
        <!-- Searchbox -->
         <mat-form-field appearance="fill">
           <mat-label>Search transactions</mat-label>
@@ -156,7 +156,7 @@
                       </div>
                       <div class="modal-footer">
                         <button mat-flat-button class="me-auto" data-bs-dismiss="modal">Cancel</button>
-                        <button mat-flat-button class="bg-success text-white" (click)="editTransaction(transaction.id, transaction.value_date, transaction.transaction_id, transaction.amount, transaction.status, transaction.movement_type, transaction.hide)" data-bs-dismiss="modal">Save Changes</button>
+                        <button mat-raised-button class="button text-white" (click)="editTransaction(transaction.id, transaction.value_date, transaction.transaction_id, transaction.amount, transaction.status, transaction.movement_type, transaction.hide)" data-bs-dismiss="modal">Save Changes</button>
                       </div>
                     </div>
                   </div>

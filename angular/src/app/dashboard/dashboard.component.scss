@@ -71,6 +71,10 @@ input[type="text"]:focus{
   border-left: none;
 }
 
+.button {
+  background: #001F30;
+}
+
 ::ng-deep .mat-form-field {
   font-size: 12px; // example
 }
