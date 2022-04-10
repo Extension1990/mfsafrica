@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { map, shareReplay } from 'rxjs/operators';
@@ -8,7 +8,7 @@ import { map, shareReplay } from 'rxjs/operators';
   templateUrl: './layout.component.html',
   styleUrls: ['./layout.component.scss']
 })
-export class LayoutComponent {
+export class LayoutComponent implements OnInit {
 
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
     .pipe(
@@ -19,6 +19,10 @@ export class LayoutComponent {
   inputText: string;
 
   constructor(private breakpointObserver: BreakpointObserver) {}
+
+  ngOnInit(): void {
+    this.resetInputText();
+  }
 
   // Reset input text
   resetInputText() {

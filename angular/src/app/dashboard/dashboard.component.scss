@@ -74,3 +74,14 @@ input[type="text"]:focus{
 ::ng-deep .mat-form-field {
   font-size: 12px; // example
 }
+
+mat-form-field {
+  width: 100%;
+}
+
+.modal-content {
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+  border: none;
+  border-top: 3px solid #001F30;
+  background: #e3f5ff;
+}

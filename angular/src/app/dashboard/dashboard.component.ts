@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MainService } from 'src/app/services/main.service';
 import Swal from 'sweetalert2';
+import {FormBuilder, FormControl, FormGroup} from '@angular/forms';
 
 @Component({
   selector: 'app-dashboard',
@@ -8,6 +9,10 @@ import Swal from 'sweetalert2';
   styleUrls: ['./dashboard.component.scss']
 })
 export class DashboardComponent implements OnInit {
+
+  options: FormGroup;
+  hideRequiredControl = new FormControl(false);
+  floatLabelControl = new FormControl('auto');
 
   transactions: any;
   value_date: string;
@@ -20,7 +25,12 @@ export class DashboardComponent implements OnInit {
   end: Date = new Date ("11/25/2017");
   hide : boolean = true;
 
-  constructor(private service: MainService) { }
+  constructor(private service: MainService, fb: FormBuilder) { 
+    this.options = fb.group({
+      hideRequired: this.hideRequiredControl,
+      floatLabel: this.floatLabelControl,
+    });
+  }
 
   ngOnInit(): void {
     this.getTransactions();
