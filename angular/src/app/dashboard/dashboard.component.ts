@@ -59,10 +59,8 @@ export class DashboardComponent implements OnInit {
     })
   }
 
-  toggleAmount(index: number) {
-    if(index) {
-      this.hide = !this.hide;
-    }
+  toggleAmount(transaction: any) {
+      transaction.hide = !transaction.hide;
   }
 
   successUpdateAlert() {

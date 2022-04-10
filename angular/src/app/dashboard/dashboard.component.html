@@ -58,9 +58,10 @@
             <td>{{ transaction.transaction_id }}</td>
             <td>{{ transaction.movement_type }}</td>
             <td>
-                <input style="float: left" class="amount" [(ngModel)]="transaction.amount" type="password" [attr.id]="'toggle' + transaction.id"  name="amount"  [type]="hide ? 'password' : 'text'">
-                <span class="icon" *ngIf="hide === true" (click)="toggleAmount(transaction.id)"><i class="fa fa-eye"></i></span>
-                <span class="icon" *ngIf="hide === false" (click)="toggleAmount(transaction.id)"><i class="fa fa-eye-slash"></i></span>
+                <input type="password" class="amount" [(ngModel)]="transaction.amount" *ngIf="transaction.hide === true">
+                <input type="text" class="amount" [(ngModel)]="transaction.amount" *ngIf="transaction.hide === false">
+                <span class="icon" *ngIf="transaction.hide === true" (click)="toggleAmount(transaction)"><i class="fa fa-eye"></i></span>
+                <span class="icon" *ngIf="transaction.hide === false" (click)="toggleAmount(transaction)"><i class="fa fa-eye-slash"></i></span>
             </td>
             <td class="text-success" *ngIf="transaction.status === 'Active'">{{ transaction.status }}</td>
             <td class="text-danger" *ngIf="transaction.status !== 'Active'">{{ transaction.status }}</td>
