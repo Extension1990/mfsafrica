@@ -89,8 +89,4 @@ export class DashboardComponent implements OnInit {
     Swal.fire("Error", 'Could not delete transaction!', 'error');
   }
 
-  getDater(data){
-    console.log(data);
-  }
-
 }

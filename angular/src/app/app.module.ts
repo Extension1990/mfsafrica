@@ -21,8 +21,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { LayoutComponent } from './layout/layout.component';
 
-import { DateRangePickerModule } from '@syncfusion/ej2-angular-calendars';
-
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
 
 @NgModule({
   declarations: [
@@ -41,7 +41,6 @@ import { DateRangePickerModule } from '@syncfusion/ej2-angular-calendars';
     ReactiveFormsModule,
     HttpClientModule,
     Ng2SearchPipeModule,
-    DateRangePickerModule,
     MatFormFieldModule,
     MatInputModule,
     MatSidenavModule,
@@ -49,7 +48,9 @@ import { DateRangePickerModule } from '@syncfusion/ej2-angular-calendars';
     MatListModule,
     MatGridListModule,
     MatCardModule,
-    MatMenuModule
+    MatMenuModule,
+    MatDatepickerModule,
+    MatNativeDateModule
   ],
   providers: [],
   bootstrap: [AppComponent]

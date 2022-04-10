@@ -26,7 +26,15 @@
               <span class="input-group-text" id="basic-addon1"><i class="fa fa-file"></i>&nbsp;&nbsp;Export as&nbsp;&nbsp;&nbsp;<i class="fa fa-chevron-down"></i></span>
             </div>
         </div>&nbsp;&nbsp;
-        <input type="date" id="picker" class="form-control w-100 date-input" placeholder="Start Date">
+        <mat-form-field appearance="fill" class="daterange">
+          <mat-label>Start date - End date</mat-label>
+          <mat-date-range-input [rangePicker]="picker">
+            <input matStartDate placeholder="Start date">
+            <input matEndDate placeholder="End date">
+          </mat-date-range-input>
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-date-range-picker #picker></mat-date-range-picker>
+        </mat-form-field>
     </div>
 </div>
 
