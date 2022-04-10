@@ -8,19 +8,20 @@
 
 <!-- Searchbox input, dropdown mockups, and daterangepiker -->
 <div class="row mb-3">
-    <div class="col-md-5">
-
+    <div class="col-md-2">
+      <mat-form-field class="local" appearance="fill" [floatLabel]="floatLabelControl.value">
+        <mat-label>Local</mat-label>
+        <mat-select>
+          <mat-option value=""></mat-option>
+          <mat-option value="Active">Active</mat-option>
+          <mat-option value="Hold">Hold</mat-option>
+          <mat-option value="Error">Error</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div class="col-md-3">
+      
        <!-- Searchbox -->
-        <!-- <div class="input-group mb-1">
-            <div class="input-group-prepend">
-              <span class="input-group-text local" id="basic-addon1">Local&nbsp;<i class="fa fa-chevron-down"></i></span>
-            </div>
-            <div class="input-group-prepend">
-              <span class="input-group-text search" id="basic-addon1"><i class="fa fa-search"></i></span>
-            </div>
-            <input type="text" class="form-control input" placeholder="Search" [(ngModel)]="searchText" aria-label="search" aria-describedby="basic-addon1">
-        </div> -->
-
         <mat-form-field appearance="fill">
           <mat-label>Search transactions</mat-label>
           <input matInput name="searchText" [(ngModel)]="searchText" placeholder="Search transactions">

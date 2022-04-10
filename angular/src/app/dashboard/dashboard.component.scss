@@ -85,3 +85,35 @@ mat-form-field {
   border-top: 3px solid #001F30;
   background: #e3f5ff;
 }
+
+.input {
+  border: none;
+  border-bottom: 1px solid rgb(142, 142, 142);
+  border-radius: 0px;
+  padding-right: 0px;
+  background: #f0f0f0;
+  padding: 10px;
+}
+
+.fa-times {
+  font-weight: 100 !important;
+}
+
+.input::placeholder {
+  font-size: 12px;
+}
+
+.reset {
+  border-radius: 0px;
+  background: #f0f0f0;
+  height: 45px;
+  border: none;
+  border-bottom: 1px solid rgb(142, 142, 142);
+  margin-top: 0px;
+}
+
+input[type="text"]:focus{
+  box-shadow: none;
+  border: none;
+  border-bottom: 2px solid indigo;
+}
