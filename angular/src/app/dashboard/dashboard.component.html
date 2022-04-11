@@ -32,7 +32,7 @@
 
         <!-- Dropdown mockups/designs -->
         <mat-form-field class="dropdowns" appearance="fill" [floatLabel]="floatLabelControl.value">
-          <mat-label>Filter</mat-label><mat-icon matPrefix>place</mat-icon>
+          <mat-label>Filter</mat-label><mat-icon matPrefix class="input-icon">place</mat-icon>
           <mat-select>
             <mat-option value=""></mat-option>
             <mat-option value="Active">Option 1</mat-option>
@@ -41,7 +41,7 @@
           </mat-select>
         </mat-form-field>&nbsp;&nbsp;
         <mat-form-field class="dropdowns" appearance="fill" [floatLabel]="floatLabelControl.value">
-          <mat-label>Export as</mat-label><mat-icon matPrefix>crop_original</mat-icon>
+          <mat-label>Export as</mat-label><mat-icon matPrefix class="input-icon">crop_original</mat-icon>
           <mat-select>
             <mat-option value=""></mat-option>
             <mat-option value="Active">Option 1</mat-option>
@@ -52,12 +52,12 @@
 
         <!-- Date range picker -->
         <mat-form-field appearance="fill" class="daterange">
-          <mat-label><mat-icon>calenda</mat-icon>Start date - End date</mat-label>
+          <mat-label>Start date - End date</mat-label>
           <mat-date-range-input [rangePicker]="picker">
             <input matStartDate placeholder="Start date">
             <input matEndDate placeholder="End date">
           </mat-date-range-input>
-          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker-toggle matPrefix [for]="picker" class="input-icon"></mat-datepicker-toggle>
           <mat-date-range-picker #picker></mat-date-range-picker>
         </mat-form-field>
         
@@ -196,9 +196,7 @@
     </div>
     <div class="col-md-6 me-auto">
       <button mat-raised-button class="skip-button">Continue</button>
-        <button mat-raised-button class="continue-button">Skip</button>&nbsp;
-    <!-- </div> -->
-    <!-- <div class="col-md-3"> -->
+      <button mat-raised-button class="continue-button">Skip</button>&nbsp;
     </div>
   </div>
 </div>
