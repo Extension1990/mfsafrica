@@ -8,6 +8,10 @@ thead {
   border: none;
 }
 
+.sort {
+  margin-top: 30px;
+}
+
 .fa-edit {
   color: blue;
 }
@@ -141,4 +145,9 @@ input[type="text"]:focus{
   box-shadow: none;
   border: none;
   border-bottom: 2px solid indigo;
+}
+
+thead {
+  background-color: #105d86;
+  color: white;
 }
