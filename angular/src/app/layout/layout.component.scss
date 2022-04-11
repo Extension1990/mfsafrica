@@ -17,6 +17,22 @@
   background: #fafafa;
 }
 
+.close {
+  text-decoration: none;
+}
+
+.icons {
+  font-size: 20px;
+}
+
+.fa-globe, .fa-cog {
+  font-size: 17px;
+}
+
+.icon {
+  margin-top: 11px;
+}
+
 .fa-times {
   font-weight: 100 !important;
 }
@@ -84,6 +100,9 @@
   p {
     margin-top: 10px;
   }
+  .name {
+    color: #105d86;
+  }
 }
 
 
@@ -91,6 +110,10 @@ input[type="text"]:focus{
   box-shadow: none;
   border: none;
   border-bottom: 2px solid indigo;
+}
+
+.mat-list-base .mat-list-item .mat-list-item-content {
+  padding: 0px !important;
 }
 
 @media screen and (max-width: 992px) {

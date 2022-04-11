@@ -2,11 +2,21 @@ import { Component, OnInit } from '@angular/core';
 import { MainService } from 'src/app/services/main.service';
 import Swal from 'sweetalert2';
 import {FormBuilder, FormControl, FormGroup} from '@angular/forms';
+import {
+  trigger,
+  state,
+  style,
+  animate,
+  transition
+} from '@angular/animations';
 
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.scss']
+  styleUrls: ['./dashboard.component.scss'],
+  animations: [
+    // animation triggers go here
+  ]
 })
 export class DashboardComponent implements OnInit {
 
