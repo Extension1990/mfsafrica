@@ -32,7 +32,7 @@
 
         <!-- Dropdown mockups/designs -->
         <mat-form-field class="dropdowns" appearance="fill" [floatLabel]="floatLabelControl.value">
-          <mat-label><mat-icon>add_location</mat-icon>&nbsp;&nbsp;Filter</mat-label>
+          <mat-label>Filter</mat-label><mat-icon matPrefix>place</mat-icon>
           <mat-select>
             <mat-option value=""></mat-option>
             <mat-option value="Active">Option 1</mat-option>
@@ -41,7 +41,7 @@
           </mat-select>
         </mat-form-field>&nbsp;&nbsp;
         <mat-form-field class="dropdowns" appearance="fill" [floatLabel]="floatLabelControl.value">
-          <mat-label><mat-icon>crop_original</mat-icon>&nbsp;&nbsp;Export as</mat-label>
+          <mat-label>Export as</mat-label><mat-icon matPrefix>crop_original</mat-icon>
           <mat-select>
             <mat-option value=""></mat-option>
             <mat-option value="Active">Option 1</mat-option>
@@ -109,7 +109,7 @@
                       <div class="modal-header">
                         <h2 class="modal-title" id="exampleModalCenterTitle">Edit Transaction <span class="text-info">{{ transaction.transaction_id }}</span></h2>
                       </div>
-                      <div class="modal-body">
+                      <div class="modal-body bg-white">
                         <form action="" method="post">
                           <div class="form-group">
                             <div class="row">

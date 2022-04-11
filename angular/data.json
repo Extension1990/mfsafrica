@@ -5,7 +5,7 @@
       "transaction_id": 1480636527,
       "amount": "230000",
       "status": "Active",
-      "movement_type": "Airtime",
+      "movement_type": "Collection",
       "hide": true,
       "id": 1
     },
@@ -59,7 +59,7 @@
       "transaction_id": "1480636562",
       "amount": "780000",
       "status": "Active",
-      "movement_type": "Money Transfer",
+      "movement_type": "Airtime",
       "hide": true,
       "id": 8
     },
