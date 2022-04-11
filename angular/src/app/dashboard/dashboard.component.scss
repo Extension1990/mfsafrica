@@ -53,6 +53,12 @@ a {
   width: 100px;
 }
 
+@media screen and (max-width: 992px) {
+  .localBox {
+    width: 100%;
+  }
+}
+
 .searchBox {
   padding-left: 0px;
 }
