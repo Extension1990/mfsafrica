@@ -2,26 +2,23 @@
   box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
   overflow-x: auto;
 }
+
 thead {
   border: none;
 }
+
 .fa-edit {
   color: blue;
 }
+
 .fa-trash {
   color: red;
 }
+
 a {
   cursor: pointer;
 }
-*:focus {
-  outline: none;
-}
-.local {
-  border-top-right-radius: 0px;
-  border-bottom-right-radius: 0px;
-  background: transparent;
-}
+
 .search, .date {
   border-top-left-radius: 0px;
   border-bottom-left-radius: 0px;
@@ -29,6 +26,7 @@ a {
   height: 38px;
   border-right: none;
 }
+
 .input {
   border-left: none;
   width: 30px;
@@ -48,6 +46,15 @@ a {
   background: transparent;
 }
 
+.localBox {
+  padding-right: 0px;
+  width: 100px;
+}
+
+.searchBox {
+  padding-left: 0px;
+}
+
 .icon {
   cursor: pointer;
 }
@@ -58,13 +65,16 @@ a {
   border-bottom-right-radius: 0px;
   height: 38px;
 }
+
 .date-input {
   height: 38px;
 }
+
 input[type="text"]:focus{
   box-shadow: 0 0 0 rgb(255, 255, 255);
   border: 0.5px solid rgb(177, 177, 177);
 }
+
 .input:focus{
   box-shadow: 0 0 0 rgb(255, 255, 255);
   border: 0.5px solid rgb(177, 177, 177);
@@ -74,6 +84,7 @@ input[type="text"]:focus{
 .button {
   background: #105d86;
 }
+
 .button:hover {
   background: #08486a;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
