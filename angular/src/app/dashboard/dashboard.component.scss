@@ -1,3 +1,7 @@
+h3 {
+  color: #042f46;
+}
+
 .card {
   border: none;
   box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
@@ -156,10 +160,14 @@ thead {
 }
 
 .continue-button {
-  background: #FF9D41;
-  color: white;
+  background: #F3F3F1;
+  color: #042f46;
+  float: right;
 }
 
 .skip-button {
-  background: #F3F3F1;
+  background: #FF9D41;
+  color: white;
+  margin-left: 10px;
+  float: right;
 }
