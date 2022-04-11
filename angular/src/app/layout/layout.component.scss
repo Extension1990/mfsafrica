@@ -58,7 +58,9 @@
   width: 200px;
   background: #001F30;
   padding: 10px;
-
+  .active {
+    color: #FF9D41;
+  }
   a {
     color: white;
     font-size: small;
