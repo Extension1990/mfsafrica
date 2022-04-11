@@ -14,18 +14,18 @@
       "transaction_id": 1480636589,
       "amount": "500000",
       "status": "Hold",
-      "movement_type": "Money Transfer",
+      "movement_type": "Collection",
       "hide": true,
       "id": 3
     },
     {
-      "id": 4,
-      "transaction_id": 1480636590,
       "value_date": "2022-01-18",
-      "movement_type": "Collection",
+      "transaction_id": 1480636590,
       "amount": "320000",
       "status": "Active",
-      "hide": true
+      "movement_type": "Airtime",
+      "hide": true,
+      "id": 4
     },
     {
       "id": 5,
@@ -60,8 +60,8 @@
       "amount": "780000",
       "status": "Active",
       "movement_type": "Money Transfer",
-      "id": 8,
-      "hide": true
+      "hide": true,
+      "id": 8
     },
     {
       "value_date": "2022-02-03",
