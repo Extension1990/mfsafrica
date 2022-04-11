@@ -5,7 +5,7 @@
       "transaction_id": 1480636527,
       "amount": "230000",
       "status": "Active",
-      "movement_type": "Collection",
+      "movement_type": "Money Transfer",
       "hide": true,
       "id": 1
     },
@@ -37,13 +37,13 @@
       "hide": true
     },
     {
-      "id": 6,
-      "transaction_id": 1480636592,
       "value_date": "2022-01-19",
-      "movement_type": "Money Transfer",
+      "transaction_id": 1480636592,
       "amount": "800000",
-      "status": "Error",
-      "hide": true
+      "status": "Active",
+      "movement_type": "Money Transfer",
+      "hide": true,
+      "id": 6
     },
     {
       "value_date": "2022-01-29",

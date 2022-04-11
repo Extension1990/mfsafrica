@@ -14,6 +14,11 @@
       <a mat-list-item href="#"><i class="fa fa-globe"></i>&nbsp;&nbsp;&nbsp;&nbsp; Zones</a>
       <a mat-list-item href="#"><i class="fa fa-cog"></i>&nbsp;&nbsp;&nbsp;&nbsp; Settings</a>
     </mat-nav-list>
+    <mat-nav-list class="sidebar-footer">
+      <div class="d-flex m-auto">
+        <i class="fa fa-user-circle footer-icon"></i><p class="text-center text-white">&nbsp;&nbsp;&nbsp;&nbsp;John Kowalski <br><small>Administrator</small></p>
+      </div>
+    </mat-nav-list>
   </mat-sidenav>
   <mat-sidenav-content>
 
@@ -54,7 +59,14 @@
     </div>
 
     <!-- Footer -->
-    <nav class="navbar footer navbar-expand-lg">
+    <nav class="navbar footer1 navbar-expand-lg pt-0">
+      <div class="buttons p-3">
+        <button mat-raised-button class="continue-button">Continue</button>&nbsp;
+        <button mat-raised-button class="skip-button">Skip</button>&nbsp;
+        <button mat-button class="cancel">Cancel</button>
+      </div>
+    </nav>
+    <nav class="navbar footer2 navbar-expand-lg">
       <p class="mx-auto">MFS Africa Assignments | April 2022 &copy; Developed by <span class="name">Extension Tlhareseng</span></p>
     </nav>
   </mat-sidenav-content>
