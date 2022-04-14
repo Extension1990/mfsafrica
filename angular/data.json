@@ -14,7 +14,7 @@
       "transaction_id": 1480636528,
       "amount": "230000",
       "status": "Active",
-      "movement_type": "Airtime",
+      "movement_type": "Collection",
       "hide": true,
       "id": 2
     },

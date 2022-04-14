@@ -163,6 +163,11 @@ thead {
   color: white;
 }
 
+tbody {
+  overflow-y: auto !important;
+  height: 100px;
+}
+
 .continue-button {
   background: #F3F3F1;
   color: #042f46;
